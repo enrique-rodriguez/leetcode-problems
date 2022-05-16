@@ -1,6 +1,5 @@
-from ast import List
+from typing import List
 from collections import defaultdict
-from typing import Optional
 
 # Definition for a binary tree node.
 class TreeNode:
@@ -9,7 +8,7 @@ class TreeNode:
         self.left = left
         self.right = right
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def levelOrder(self, root) -> List[List[int]]:
         levels = defaultdict(list)
         self.helper(root, levels, currentLevel=1)
         solution = []
